@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { OrderPizzaComponent } from './order-pizza/order-pizza.component';
 import { BuildPizzaComponent } from './build-pizza/build-pizza.component';
+import { routing } from './appRoutes';
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import { BuildPizzaComponent } from './build-pizza/build-pizza.component';
     BuildPizzaComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, routing
   ],
   providers: [],
   bootstrap: [AppComponent]
