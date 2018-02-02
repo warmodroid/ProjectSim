@@ -4,14 +4,29 @@
   <div class="col-md-6" *ngFor="let hero of pizzaList" id ="example2" style="margin-bottom: 10px;
   padding: 10px;
   box-shadow: 5px 10px #e6e6e6">
-  
 
-    <div style=" background-color:#f7f7f2fa">
-      <p> {{hero.name}} </p>
-      <img  height=100px width=100px src="{{hero.image}}" alt="">
-    </div>
 
+        <div class="row" id="box">
+            <div class="col-md-3 col-xs-3  " >
+                <h4> <strong> {{hero.name}} </strong> </h4>
+
+                <img  *ngIf=" hero.type=='nonveg' " class="img-responsive" id="veg" src="./assets/nonveg.png" />
+                <img  *ngIf=" hero.type=='veg' " class="img-responsive" id="veg" src="./assets/veg.png" />
+                <h5>&#8377; {{hero.price}} </h5>
+            </div>
+            <div class="col-md-5 col-xs-5" >
+                <p class="text-left" >{{hero.description}} </p>
+                <h5 class="text-left"> <strong>ingredients </strong> {{hero.ingredients}} </h5>
+                <h5 class="text-left"><strong>Topping </strong>{{hero.topping}} </h5>
+            </div>
+            <div class="col-md-4 col-xs-4" >
+                <img  height=100px width=100px src="{{hero.image}}" alt="">
+                <button class="btn btn-warning">Add to
+                  Cart</button>
+            </div>
+        </div>
 
   </div>
+
 
 </div>
