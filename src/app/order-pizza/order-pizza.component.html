@@ -1,14 +1,17 @@
 <div class="text-center container-fluid ">
-  <div class="col-md-6 col-sm-6 col-xs-6" >
-    <div style=" background-color:beige">
-      <p>card</p>
-    </div>
-  </div>
-  <div class="col-md-6 col-sm-6 col-xs-6" >
-      <div style=" background-color:beige">
-        <p>card</p>
-      </div>
+
+
+  <div class="col-md-6" *ngFor="let hero of pizzaList" id ="example2" style="margin-bottom: 10px;
+  padding: 10px;
+  box-shadow: 5px 10px #e6e6e6">
+  
+
+    <div style=" background-color:#f7f7f2fa">
+      <p> {{hero.name}} </p>
+      <img  height=100px width=100px src="{{hero.image}}" alt="">
     </div>
 
-    <p>{{pizzaList | json}}</p>
+
+  </div>
+
 </div>
