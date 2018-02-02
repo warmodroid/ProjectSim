@@ -1,9 +1,9 @@
 
-<div>
+<div class="container-fluid" >
 
   <p>dsj fjernfv erjenrjke n</p>
 
-  <table class="table" align="center" >
+  <table class="table " align="center" >
     <thead>
       <tr>
         <th>Indi</th>
@@ -13,9 +13,9 @@
     </thead>
     <tbody>
       <tr *ngFor = "let t of indiList">
-        <td scope="row"> <img src="{{t.image}}" alt=""> </td>
+        <td scope="row"> <img id="img" src="{{t.image}}" alt=""> </td>
         <td> <strong>{{t.tname}}     &#8377;{{t.price}}</strong></td>
-        <td> <label ></label> <input type="checkbox" name="Add" id="">  </td>
+        <td>  <input type="checkbox" name="Add" id="">  <label type="warning" >Add</label> </td>
       </tr>
     </tbody>
   </table>
