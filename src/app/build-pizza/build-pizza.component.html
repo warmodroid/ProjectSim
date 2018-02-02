@@ -1,3 +1,24 @@
-<p>
-  build-pizza works!
-</p>
+
+<div>
+
+  <p>dsj fjernfv erjenrjke n</p>
+
+  <table class="table" align="center" >
+    <thead>
+      <tr>
+        <th>Indi</th>
+        <th>Price</th>
+        <th>Select</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let t of indiList">
+        <td scope="row"> <img src="{{t.image}}" alt=""> </td>
+        <td> <strong>{{t.tname}}     &#8377;{{t.price}}</strong></td>
+        <td> <label ></label> <input type="checkbox" name="Add" id="">  </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+</div>

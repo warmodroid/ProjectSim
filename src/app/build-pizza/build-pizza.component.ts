@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BuildPizzaServiceService } from '../build-pizza-service.service';
 
 @Component({
   selector: 'app-build-pizza',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuildPizzaComponent implements OnInit {
 
-  constructor() { }
+  indiList: any;
+
+  constructor(private getPizzaService: BuildPizzaServiceService) {
+    this.indiList = getPizzaService.getIndi().subscribe(
+      (res) => {this.indiList = res; });
+   }
 
   ngOnInit() {
   }
