@@ -8,6 +8,8 @@ import { OrderPizzaComponent } from './order-pizza/order-pizza.component';
 import { BuildPizzaComponent } from './build-pizza/build-pizza.component';
 import { routing } from './appRoutes';
 import { HttpClientModule } from '@angular/common/http';
+import { BuildPizzaServiceService } from './build-pizza-service.service';
+import { OrderPizzaServiceService } from './order-pizza-service.service';
 
 
 @NgModule({
@@ -20,7 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule, routing, HttpClientModule
   ],
-  providers: [],
+  providers: [BuildPizzaServiceService, OrderPizzaServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule {  }
