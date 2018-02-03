@@ -2,3 +2,22 @@ img {
   height: 100px;
   width: 100px;
 }
+th,tr {
+  text-align: center;
+}
+table {
+  width: 70%;
+}
+#tickBox {
+  color: #e6a631
+}
+
+#totalCost {
+  color: blueviolet;
+  margin-left: 2%
+}
+
+#buildButton {
+  background-color: black;
+  color: #e6a631;
+}

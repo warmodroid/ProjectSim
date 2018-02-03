@@ -1,24 +1,30 @@
 
-<div class="container-fluid" >
+<div class="container-fluid " >
 
-  <p>dsj fjernfv erjenrjke n</p>
-
-  <table class="table " align="center" >
+  <div class="text-center container-fluid table-responsive" >
+    <p>Pizzeria now gives you options to build your own pizza. Customize your pizza by choosing from the list given below</p>
+    
+  <table class="table table-striped" align="center" >
     <thead>
-      <tr>
-        <th>Indi</th>
+      <tr >
+        <th>Ingredient</th>
         <th>Price</th>
         <th>Select</th>
       </tr>
     </thead>
-    <tbody>
-      <tr *ngFor = "let t of indiList">
-        <td scope="row"> <img id="img" src="{{t.image}}" alt=""> </td>
+    <tbody >
+      <tr *ngFor = "let t of indiList" >
+        <td scope="row" > <img id="img" src="{{t.image}}" alt=""> </td>
         <td> <strong>{{t.tname}}     &#8377;{{t.price}}</strong></td>
-        <td>  <input type="checkbox" name="Add" id="">  <label type="warning" >Add</label> </td>
+        <td>  <input ngModel="checkboxValue" (change)="newCheck(t.price,t.tname)" type="checkbox" name="{{t.price}}" id="{{t.price}}" ><label id="tickBox" >Add</label></td>
       </tr>
     </tbody>
   </table>
+  <h4 id="totalCost">Total Cost: {{totalCost}}</h4>
+  <button id="buildButton">Build Ur Pizza</button>
+  </div>
+
+  
 
 
 </div>

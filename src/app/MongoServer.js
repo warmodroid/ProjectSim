@@ -56,7 +56,7 @@ app.get('/buildPizza',function(req,res){
     //res.send("sdf");
     mongoClinet.connect(url,function(err,client){
         if(err){
-            console.log("database connection failed");
+            console.log("database connection");
         }
         else{
             console.log("databse connected");
