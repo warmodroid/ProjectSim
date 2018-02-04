@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BuildPizzaServiceService } from './build-pizza-service.service';
 import { OrderPizzaServiceService } from './order-pizza-service.service';
 import { KartCompComponent } from './kart-comp/kart-comp.component';
+import { KartServiceService } from './kart-service.service';
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import { KartCompComponent } from './kart-comp/kart-comp.component';
   imports: [
     BrowserModule, routing, HttpClientModule
   ],
-  providers: [BuildPizzaServiceService, OrderPizzaServiceService],
+  providers: [BuildPizzaServiceService, OrderPizzaServiceService, KartServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule {  }

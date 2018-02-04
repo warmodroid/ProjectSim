@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OrderPizzaServiceService } from '../order-pizza-service.service';
+import { KartServiceService } from '../kart-service.service';
 
 @Component({
   selector: 'app-order-pizza',
@@ -11,9 +12,12 @@ export class OrderPizzaComponent implements OnInit {
   pizzaList: any;
   itemsAdded = [];
 
-  constructor(private getPizzaService: OrderPizzaServiceService) {
+  constructor(private getPizzaService: OrderPizzaServiceService,private kartSer: KartServiceService) {
     this.pizzaList = getPizzaService.getPizza().subscribe(
       (res) => {this.pizzaList = res; });
+
+
+
    }
 
   ngOnInit() {
@@ -25,7 +29,8 @@ export class OrderPizzaComponent implements OnInit {
       "price":price
     };
     this.itemsAdded.push(body);
-    alert("Added items "+this.itemsAdded.toString());
+    this.kartSer.addToServiceCart(body);
+    //alert("Added items "+this.itemsAdded.toString());
   }
 
 }

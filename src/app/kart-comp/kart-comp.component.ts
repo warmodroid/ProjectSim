@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { KartServiceService } from '../kart-service.service';
 
 @Component({
   selector: 'app-kart-comp',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KartCompComponent implements OnInit {
 
-  constructor() { }
+  items = [];
+
+  constructor(private kartSer: KartServiceService) { 
+    this.items = kartSer.getToServiceCart();
+  }
 
   ngOnInit() {
   }
