@@ -9,6 +9,7 @@ import { OrderPizzaServiceService } from '../order-pizza-service.service';
 export class OrderPizzaComponent implements OnInit {
 
   pizzaList: any;
+  itemsAdded=[];
 
   constructor(private getPizzaService: OrderPizzaServiceService) {
     this.pizzaList = getPizzaService.getPizza().subscribe(
@@ -16,6 +17,11 @@ export class OrderPizzaComponent implements OnInit {
    }
 
   ngOnInit() {
+  }
+
+  addCart(name:any,price:any){
+    this.itemsAdded.push(name);
+    alert("Added items "+this.itemsAdded);
   }
 
 }

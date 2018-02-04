@@ -21,7 +21,7 @@
             </div>
             <div class="col-md-4 col-xs-4" >
                 <img  height=100px width=100px src="{{hero.image}}" alt="">
-                <button class="btn btn-warning">Add to
+                <button class="btn btn-warning" (click)="addCart(hero.name,hero.price)" >Add to
                   Cart</button>
             </div>
         </div>
