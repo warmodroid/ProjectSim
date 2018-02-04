@@ -10,6 +10,7 @@ import { routing } from './appRoutes';
 import { HttpClientModule } from '@angular/common/http';
 import { BuildPizzaServiceService } from './build-pizza-service.service';
 import { OrderPizzaServiceService } from './order-pizza-service.service';
+import { KartCompComponent } from './kart-comp/kart-comp.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { OrderPizzaServiceService } from './order-pizza-service.service';
     AppComponent,
     HomeComponent,
     OrderPizzaComponent,
-    BuildPizzaComponent
+    BuildPizzaComponent,
+    KartCompComponent
   ],
   imports: [
     BrowserModule, routing, HttpClientModule
