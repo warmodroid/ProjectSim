@@ -13,7 +13,7 @@ export class KartCompComponent implements OnInit {
 
   constructor(private kartSer: KartServiceService) {
     this.items = kartSer.getToServiceCart();
-    this.sessionItems = localStorage.getItem('kart');
+    this.sessionItems = JSON.parse(localStorage.getItem('kart'));
   }
 
   ngOnInit() {

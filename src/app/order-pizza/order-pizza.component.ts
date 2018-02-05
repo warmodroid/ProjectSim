@@ -12,7 +12,7 @@ export class OrderPizzaComponent implements OnInit {
   pizzaList: any;
   itemsAdded = [];
 
-  constructor(private getPizzaService: OrderPizzaServiceService,private kartSer: KartServiceService) {
+  constructor(private getPizzaService: OrderPizzaServiceService, private kartSer: KartServiceService) {
    getPizzaService.getPizza().subscribe(
       (res) => {this.pizzaList = res; });
 
@@ -25,8 +25,8 @@ export class OrderPizzaComponent implements OnInit {
 
   addCart(name:any,price:any){
     let body = {
-      "name":name,
-      "price":price
+      "name": name,
+      "price": price
     };
     this.itemsAdded.push(body);
     this.kartSer.addToServiceCart(body);

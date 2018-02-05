@@ -1,4 +1,4 @@
-<p>
-  {{items | json}}
-  {{sessionItems}}
-</p>
+<div *ngFor="let i of sessionItems">
+  {{i.name}}
+  {{i.price}}
+</div>
