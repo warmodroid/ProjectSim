@@ -13,7 +13,7 @@ export class OrderPizzaComponent implements OnInit {
   itemsAdded = [];
 
   constructor(private getPizzaService: OrderPizzaServiceService,private kartSer: KartServiceService) {
-    this.pizzaList = getPizzaService.getPizza().subscribe(
+   getPizzaService.getPizza().subscribe(
       (res) => {this.pizzaList = res; });
 
 
@@ -30,7 +30,8 @@ export class OrderPizzaComponent implements OnInit {
     };
     this.itemsAdded.push(body);
     this.kartSer.addToServiceCart(body);
-    //alert("Added items "+this.itemsAdded.toString());
+    // alert(JSON.stringify(this.itemsAdded));
+    localStorage.setItem('kart', JSON.stringify(this.itemsAdded));
   }
 
 }

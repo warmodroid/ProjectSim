@@ -14,11 +14,12 @@ export class BuildPizzaComponent implements OnInit {
   itemsAdded=[];
 
   constructor(private getPizzaService: BuildPizzaServiceService) {
-    this.indiList = getPizzaService.getIndi().subscribe(
-      (res) => {this.indiList = res; });
+    getPizzaService.getIndi().subscribe(
+      (res) => {this.indiList = res; console.log(res); });
+
    }
 
-   newCheck(price:any,name:any){
+   newCheck(price:any, name:any){
      if(!this.itemsAdded.filter(nam => nam == name)[0]){
       this.itemsAdded.push(name);
       console.log(this.itemsAdded);

@@ -9,9 +9,11 @@ import { KartServiceService } from '../kart-service.service';
 export class KartCompComponent implements OnInit {
 
   items = [];
+  sessionItems: any;
 
-  constructor(private kartSer: KartServiceService) { 
+  constructor(private kartSer: KartServiceService) {
     this.items = kartSer.getToServiceCart();
+    this.sessionItems = localStorage.getItem('kart');
   }
 
   ngOnInit() {

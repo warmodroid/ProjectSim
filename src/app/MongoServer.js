@@ -38,8 +38,9 @@ app.get('/orderPizza',function(req,res){
                     console.log(err);
                 }
                 else{
-                    //console.log(result);
+                    console.log(result);
                     //data = result;
+
                     res.json(result);
                 }
             });

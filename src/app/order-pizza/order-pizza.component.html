@@ -10,7 +10,7 @@
             <div class="col-md-3 col-xs-3  " >
                 <h4> <strong> {{hero.name}} </strong> </h4>
 
-                <img  *ngIf=" hero.type=='nonveg' " class="img-responsive" id="veg" src="./assets/nonveg.png" />
+                <img  *ngIf=" hero.type =='nonveg' " class="img-responsive" id="veg" src="./assets/nonveg.png" />
                 <img  *ngIf=" hero.type=='veg' " class="img-responsive" id="veg" src="./assets/veg.png" />
                 <h5>&#8377; {{hero.price}} </h5>
             </div>

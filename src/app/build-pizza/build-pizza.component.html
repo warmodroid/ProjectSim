@@ -3,7 +3,7 @@
 
   <div class="text-center container-fluid table-responsive" >
     <p>Pizzeria now gives you options to build your own pizza. Customize your pizza by choosing from the list given below</p>
-    
+
   <table class="table table-striped" align="center" >
     <thead>
       <tr >
@@ -14,7 +14,7 @@
     </thead>
     <tbody >
       <tr *ngFor = "let t of indiList" >
-        <td scope="row" > <img id="img" src="{{t.image}}" alt=""> </td>
+        <td> <img id="img" src="{{t.image}}" alt=""> </td>
         <td> <strong>{{t.tname}}     &#8377;{{t.price}}</strong></td>
         <td>  <input ngModel="checkboxValue" (change)="newCheck(t.price,t.tname)" type="checkbox" name="{{t.price}}" id="{{t.price}}" ><label id="tickBox" >Add</label></td>
       </tr>
@@ -24,7 +24,7 @@
   <button id="buildButton">Build Ur Pizza</button>
   </div>
 
-  
+
 
 
 </div>
