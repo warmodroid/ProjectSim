@@ -10,6 +10,7 @@ export class KartCompComponent implements OnInit {
 
   items = [];
   sessionItems: any;
+  totalCost: any;
 
   constructor(private kartSer: KartServiceService) {
     this.items = kartSer.getToServiceCart();
