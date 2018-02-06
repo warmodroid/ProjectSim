@@ -19,7 +19,7 @@ export class BuildPizzaComponent implements OnInit {
 
    }
 
-   newCheck(price: any, name: any){
+   newCheck(price: any, name: any) {
      if (!this.itemsAdded.filter(nam => nam == name)[0]) {
       this.itemsAdded.push(name);
       console.log(this.itemsAdded);

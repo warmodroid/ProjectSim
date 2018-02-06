@@ -34,8 +34,9 @@ export class OrderPizzaComponent implements OnInit {
     this.kartSer.addToServiceCart(body);
     // alert(JSON.stringify(this.itemsAdded));
     this.totalCost = this.totalCost + Number(price);
-    localStorage.setItem('kart', JSON.stringify(this.itemsAdded));
-    localStorage.setItem('totalCost', JSON.stringify(this.totalCost));
+    sessionStorage.setItem('kart', JSON.stringify(this.itemsAdded));
+    sessionStorage.setItem('totalCost', JSON.stringify(this.totalCost));
+
   }
 
 }

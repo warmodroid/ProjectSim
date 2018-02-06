@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BuildPizzaComponent } from './build-pizza.component';
+import { BuildPizzaServiceService } from '../build-pizza-service.service';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 describe('BuildPizzaComponent', () => {
   let component: BuildPizzaComponent;
@@ -8,7 +10,9 @@ describe('BuildPizzaComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BuildPizzaComponent ]
+      declarations: [ BuildPizzaComponent ], providers: [BuildPizzaServiceService],   imports: [
+        HttpClientModule
+    ],
     })
     .compileComponents();
   }));
