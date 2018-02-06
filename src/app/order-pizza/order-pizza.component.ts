@@ -11,6 +11,7 @@ export class OrderPizzaComponent implements OnInit {
 
   pizzaList: any;
   itemsAdded = [];
+  totalCost = 0;
 
   constructor(private getPizzaService: OrderPizzaServiceService, private kartSer: KartServiceService) {
    getPizzaService.getPizza().subscribe(
@@ -23,15 +24,18 @@ export class OrderPizzaComponent implements OnInit {
   ngOnInit() {
   }
 
-  addCart(name:any,price:any){
+  addCart(name: any, price: any) {
     let body = {
       "name": name,
       "price": price
     };
+    // localStorage.clear();
     this.itemsAdded.push(body);
     this.kartSer.addToServiceCart(body);
     // alert(JSON.stringify(this.itemsAdded));
+    this.totalCost = this.totalCost + Number(price);
     localStorage.setItem('kart', JSON.stringify(this.itemsAdded));
+    localStorage.setItem('totalCost', JSON.stringify(this.totalCost));
   }
 
 }
