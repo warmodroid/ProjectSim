@@ -41,6 +41,7 @@ export class BuildPizzaComponent implements OnInit {
   buildPizzaButton() {
     localStorage.setItem('buildKartItems', JSON.stringify(this.itemsAdded));
     localStorage.setItem('totalCost', JSON.stringify(Number(localStorage.getItem('totalCost')) + this.totalCost));
+    alert('Check you Cart');
   }
 
 }
